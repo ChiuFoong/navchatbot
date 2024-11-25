@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<title>Chatbot Page</title>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=.2, user-scalable=no" />
+ <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-size: 100%;
+            }
+            body {
+                max-width: 100%;
+                font-size: 1em;
+                line-height: 1.4;
+            }
+            header {
+                background-color: #6fa8dc;
+                padding: .25em 0;
+            }
+            h1 {
+                font-size: 2.5em;
+            }
+            nav {
+                text-transform: uppercase;
+                background-color: #eb9f9f;
+                padding: .25em;
+            }
+        </style>
+<body>
+<link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
+<script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+<header>
+<h1 class="blue">Welcome to NAV AI ChatBot!</h1>
+<h2>Missions</h2>
+<p>(1) Deploy a tool to help general DAF users understand, initiate, and eventually solve their AI problems.</p>
+<p>(2) Provide users information to get started and point them to the right AI Experts in their MAJCOM.</p>
+</header>
+	<nav>
+    <a href="https://usaf.dps.mil/sites/SAF-SA/SitePages/SA-Home.aspx" target="_blank">Home</a>
+    <a href="https://usaf.dps.mil/sites/SAF-SA/SAR/SitePages/Home.aspx" target="_blank">SAF/SA</a>
+    <a href="https://www.safcn.af.mil/AI/" target="_blank">Ask Amamda</a>
+    <a href="mailto:marc.chale.1@us.af.mil" target=" _blank">Contact</a>
+  </nav>
+  <df-messenger
+  location="us-east1"
+  project-id="afrl-il4-rch-afsorchatbot-f3f2"
+  agent-id="cf1eb99f-7a37-4768-8f4a-dbe9ea127b78"
+  intent="WELCOME"
+  language-code="en"
+  max-query-length="-1">
+  <df-messenger-chat-bubble
+   chat-title="NAV AI Chatbot">
+  </df-messenger-chat-bubble>
+</df-messenger>
+<style>
+  df-messenger {
+    z-index: 999;
+    position: fixed;
+    --df-messenger-font-color: #000;
+    --df-messenger-font-family: Roboto;
+    --df-messenger-chat-background: #f3f6fc;
+    --df-messenger-message-user-background: #147efb;
+    --df-messenger-message-bot-background: #fff;
+    --df-messenger-chips-text-wrap: normal;
+    bottom: 16px;
+    right: 16px;
+  }
+</style>
+</body>
+
+<img src="./image/airplane.JPG" alt="airplane" style="height:50%; width: 100%;" />
+</head>
+
+</html>
