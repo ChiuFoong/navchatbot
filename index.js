@@ -9,11 +9,12 @@ webApp.use(express.urlencoded({
 webApp.use(express.json());
 
 const PORT = 8080;
+const HOST = '0.0.0.0';
 
 webApp.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '/index.html'));
 });
 
-webApp.listen(PORT, () => {
+webApp.listen(PORT, HOST, () => {
     console.log(`Server is up and running at ${PORT}`);
 });
